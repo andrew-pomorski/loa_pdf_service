@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<meta name="charset" content="UTF-8">
+		<title>Buzz Advisors</title>
+	</head>
+	<body>
+		<h1>Member: {{ .Member  }}</h1>
+		<h1>Member Current Address: {{ .CurrentAddr  }}</h1>
+		<h1>Member UK Address: {{ .UKAddr  }}</h1>
+		<h1> Providers: </h1>
+		{{ range $provider := .ProvidersData }}
+			<p>{{$provider.Providers_name}}</p>
+			<p>{{$provider.Plan_number }}</p>
+		{{ end }} 
+		<h1>Date of Birth: {{ .DateOfBirth }}</h1>
+		<h1>National Insurance Number: {{ .NIN }}</h1>
+	</body>
+</html>
